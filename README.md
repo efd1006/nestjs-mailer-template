@@ -30,6 +30,8 @@ Built on top of NodeMailer package.
 
 It uses AWS SES as transport and handlebars for its main templating engine.
 
+For queueing it uses @nestjs/bull package for queue and bull-board for dashboard.
+
 ## Installation
 
 ```bash
