@@ -30,6 +30,8 @@ Built on top of NodeMailer package.
 
 It uses AWS SES as transport and handlebars for its main templating engine.
 
+For queuing see featue/mail-queue branch
+
 ## Installation
 
 ```bash
@@ -65,8 +67,8 @@ $ npm run test:cov
 ### TODO
 
 - [x] Setup Mailing Template and configuration.
-- [ ] Mail Queue. 
-
+- [x] Mail Queue (feature/mail-queue) branch. 
+- [x] Add Bull dashboard (feature/mail-queue) branch.
 
 ## Support
 
