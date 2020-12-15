@@ -28,6 +28,9 @@ export class MailService {
       this.logger.error(`Error queueing send_email to email address ${email}`)
       return null
     }
+  }
 
+  getQueue() {
+    return this.mailQueue
   }
 }

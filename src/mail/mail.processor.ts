@@ -42,6 +42,7 @@ export class MailProcessor {
 					username: 'John Snow',
 				},
 			})
+			job.progress(100)
 			return result
 
 		} catch (error) {

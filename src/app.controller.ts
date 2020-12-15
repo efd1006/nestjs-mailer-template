@@ -1,10 +1,12 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { AppService } from './app.service';
+import { MailService } from './mail/mail.service';
 
 @Controller()
 export class AppController {
   constructor(
-    private readonly appService: AppService 
+    private readonly appService: AppService,
+    private readonly mailService: MailService
   ) {
   }
 
@@ -16,5 +18,12 @@ export class AppController {
   @Get('send-email')
   async testSendEmail() {
     return await this.appService.sendEmail('kikow19009@94jo.com')
+  }
+
+  @Get('queue/status/:jobid')
+  async getQueueStatus(
+    @Param('jobid') jobId
+  ) {
+    return this.mailService.getQueue().getJob(jobId)
   }
 }
