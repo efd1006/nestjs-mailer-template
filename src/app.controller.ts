@@ -3,15 +3,18 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly appService: AppService 
+  ) {
+  }
 
   @Get()
   getHello(): string {
     return this.appService.getHello()
   }
 
-  @Get('email')
+  @Get('send-email')
   async testSendEmail() {
-    return await this.appService.sendEmail('test@mail.com')
+    return await this.appService.sendEmail('kikow19009@94jo.com')
   }
 }

@@ -66,7 +66,7 @@ $ npm run test:cov
 
 - [x] Setup Mailing Template and configuration.
 - [ ] Mail Queue. 
-
+- [ ] Add Bull dashboard.
 
 ## Support
 
