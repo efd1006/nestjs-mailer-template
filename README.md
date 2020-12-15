@@ -26,7 +26,9 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Built on top of NodeMailer package.
+
+It uses AWS SES as transport and handlebars for its main templating engine.
 
 ## Installation
 
