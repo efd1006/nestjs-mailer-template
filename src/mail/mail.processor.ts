@@ -3,7 +3,7 @@ import { OnQueueActive, OnQueueCompleted, OnQueueFailed, OnQueueWaiting, Process
 import { Logger } from '@nestjs/common'
 import { Job } from 'bull'
 import 'dotenv/config'
-import { MAIL_QUEUE, SEND_EMAIL } from 'src/constants'
+import { MAIL_QUEUE, SEND_EMAIL } from 'src/mail/constants'
 
 @Processor(MAIL_QUEUE)
 export class MailProcessor {

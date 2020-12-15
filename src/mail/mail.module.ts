@@ -6,7 +6,7 @@ import { MailService } from './mail.service';
 import * as AWS from 'aws-sdk'
 import 'dotenv/config'
 import { MailProcessor } from './mail.processor';
-import { MAIL_QUEUE } from 'src/constants';
+import { MAIL_QUEUE } from 'src/mail/constants';
 
 @Module({
   imports: [

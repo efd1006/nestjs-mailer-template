@@ -3,8 +3,8 @@ import { Injectable, Logger } from '@nestjs/common';
 import { Queue } from 'bull';
 const { setQueues, BullMQAdapter, BullAdapter } = require('bull-board')
 import 'dotenv/config'
-import { MAIL_QUEUE, SEND_EMAIL } from 'src/constants';
-import { IEmail } from 'src/interfaces/emai.interface';
+import { MAIL_QUEUE, SEND_EMAIL } from 'src/mail/constants';
+import { IEmail } from 'src/mail/interfaces/emai.interface';
 
 @Injectable()
 export class MailService {
