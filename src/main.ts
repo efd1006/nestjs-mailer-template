@@ -1,12 +1,20 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 const { router } = require('bull-board')
+const basicAuth = require('express-basic-auth')
+import 'dotenv/config'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // can be placed in a controller with proper authentication
-  app.use('/admin/queues', router)
+  app.use('/bull-dashboard/queues', basicAuth({
+      users: {
+        [process.env.BULL_DASHBOARD_USER]: process.env.BULL_DASHBOARD_PASSWORD,
+      },
+      challenge: true,
+    }),
+    router
+  )
 
   await app.listen(3000);
 }

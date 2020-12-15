@@ -31,6 +31,7 @@
     "bull-board": "^1.1.2",
     "bullmq": "^1.11.0",
     "dotenv": "^8.2.0",
+    "express-basic-auth": "^1.2.0",
     "handlebars": "^4.7.6",
     "nodemailer": "^6.4.17",
     "reflect-metadata": "^0.1.13",
